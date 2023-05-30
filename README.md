@@ -23,10 +23,8 @@
     </a>
 </div>
 
-<br>
-
 <div align="center">
-    <img float="left" align="left" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/66a3aef1-14ac-4878-b69d-9aa6556e6dc2"/>
+    <img src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/233267ef-4d97-461e-acb0-5e0dfe7e8342"/>
 </div>
 
 ## ⚡️ Introduction
@@ -86,23 +84,23 @@ The following browsers are supported:
             <th scope="row"></th>
             <td align="center">
                 <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px"/>
-                <div>Chrome</div>
+                <br>Chrome
             </td>
             <td align="center">
                 <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px"/>
-                <div>Edge</div>
+                <br>Edge
             </td>
             <td align="center">
                 <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px"/>
-                <div>Firefox</div>
+                <br>Firefox
             </td>
             <td align="center">
                 <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px"/>
-                <div>Safari</div>
+                <br>Safari
             </td>
             <td align="center">
                 <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px"/>
-                <div>Opera</div>
+                <br>Opera
             </td>
         </tr>
         <tr>
