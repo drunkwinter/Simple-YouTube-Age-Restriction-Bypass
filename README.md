@@ -30,13 +30,13 @@
 </div>
 
 
-## Introduction
+## ⚡️ Introduction
 
 `Simple YouTube Age Restriction Bypass` is a simple tool designed to bypass age restrictions on YouTube videos. It allows users to easily view content that is normally restricted due to age restrictions imposed by YouTube.
 
 This tool aims to provide a seamless and hassle-free experience for users who may encounter age restrictions while browsing or accessing YouTube content. By bypassing these restrictions, it enables users to access the desired content without the need to create or log in with a YouTube account.
 
-## Getting started
+## 🕹️ Getting started
 
 ### Installation
 
@@ -74,15 +74,7 @@ Alternative mirrors:
 
 No further actions are necessary. All age restricted videos are automatically unlocked. Make sure you reload YouTube after the installation.
 
-## Privacy
-
-In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](/account-proxy).
-
-**No credentials are sent from your YouTube account! The only info that the proxy server receives from you is the Video-ID and some non-user related information like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you have set a different proxy server instance, then the operator's policies apply.
-
-To have an overview of the number of requests and possible issues, anonymous usage statistics are collected. These statistics can be viewed [here](https://youtube-proxy.zerody.one/getStats).
-
-## Compatibility
+## 🧩 Compatibility
 
 ### Browser support
 
@@ -133,17 +125,17 @@ And many more!
 
 ### Android
 
-**Simple YouTube Age Restriction Bypass** works on Android with the browser version of YouTube [m.youtube.com](https://m.youtube.com) in combination with the [Userscript](#userscript).
-> Only a few browsers such as [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) and [Kiwi Browser](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) currently support extensions. Tampermonkey can be installed there.
+`YouTube Age Restriction Bypass` works on Android with the browser version of YouTube [m.youtube.com](https://m.youtube.com).
+> Only a few browsers such as [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) and [Kiwi Browser](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) currently support extensions.
 
 > [Bromite](https://www.bromite.org/) supports userscripts natively. The script can be installed via Settings > User Scripts.
 
 ### iOS/iPadOS
 
-**Simple YouTube Age Restriction Bypass** also works on iOS/iPadOS Safari with the browser version of YouTube [m.youtube.com](https://m.youtube.com) in combination with the [Userscript](#userscript).
-> You need to install the free extension [Userscripts](https://apps.apple.com/us/app/userscripts/id1463298887) for Safari from the AppStore to install the [Userscript](#userscript).
+`YouTube Age Restriction Bypass` also works on iOS/iPadOS Safari with the browser version of YouTube [m.youtube.com](https://m.youtube.com).
+> You need to install the free extension [Userscripts](https://apps.apple.com/us/app/userscripts/id1463298887) for Safari from the App Store to install the [Userscript](#userscript).
 
-## Development
+## 🛠️ Development
 
 ### Prerequisites
 
@@ -172,13 +164,21 @@ npm run build
 The userscript `Simple-YouTube-Age-Restriction-Bypass.user.js` and extension should now be located in the `dist` folder.
 > The extension is compiled to both Manifest [V2](https://developer.chrome.com/docs/extensions/mv2) and [V3](https://developer.chrome.com/docs/extensions/mv3/intro).
 
-## Disclaimer
+## 🔒 Privacy
+
+In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](/account-proxy).
+
+**No credentials are sent from your YouTube account! The only info that the proxy server receives from you is the Video-ID and some non-user related information like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you have set a different proxy server instance, then the operator's policies apply.
+
+To have an overview of the number of requests and possible issues, anonymous usage statistics are collected. These statistics can be viewed [here](https://youtube-proxy.zerody.one/getStats).
+
+## ⚠️ Disclaimer
 
 `Simple YouTube Age Restriction Bypass` is for educational and informational purposes only. It is not intended to encourage or facilitate any unauthorized access to restricted content on YouTube or any other platform.
 
 The use of this project or any related code is at your own risk. You are solely responsible for complying with the terms of service, guidelines, and legal requirements set by YouTube or any other platform you interact with.
 
-## Contributors
+## 👥 Contributors
 
 Want to contribute to this project? Feel free to open an [issue](../../issues) or [pull request](../../pulls).
 
