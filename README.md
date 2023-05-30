@@ -2,7 +2,7 @@
     <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
         <picture>
             <source height="72" media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/1a3c22b6-7588-4e89-a736-bfa06185f5b8">
-            <img height="72" alt="Simple YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/c8b85fc7-d098-4394-9d17-970860661a54">
+            <img height="72" alt="YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/c8b85fc7-d098-4394-9d17-970860661a54">
         </picture>
     </a>
 </h1>
@@ -32,7 +32,7 @@
 
 ## ⚡️ Introduction
 
-`Simple YouTube Age Restriction Bypass` is a simple tool designed to bypass age restrictions on YouTube videos. It allows users to easily view content that is normally restricted due to age restrictions imposed by YouTube.
+`YouTube Age Restriction Bypass` is a simple tool designed to bypass age restrictions on YouTube videos. It allows users to easily view content that is normally restricted due to age restrictions imposed by YouTube.
 
 This tool aims to provide a seamless and hassle-free experience for users who may encounter age restrictions while browsing or accessing YouTube content. By bypassing these restrictions, it enables users to access the desired content without the need to create or log in with a YouTube account.
 
@@ -59,7 +59,7 @@ We're looking for ways to make this process easier.
     > - [Tampermonkey for Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)<br>
     > - [Userscripts for Safari (MacOS/iOS/iPadOS)](https://apps.apple.com/us/app/userscripts/id1463298887)<br>
 
-2. Install **Simple YouTube Age Restriction Bypass** by clicking **[this link](../../raw/main/dist/Simple-YouTube-Age-Restriction-Bypass.user.js)**.
+2. Install **YouTube Age Restriction Bypass** by clicking **[this link](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/raw/main/dist/Simple-YouTube-Age-Restriction-Bypass.user.js)**.
 
 Alternative mirrors:
 
@@ -166,7 +166,7 @@ The userscript `Simple-YouTube-Age-Restriction-Bypass.user.js` and extension sho
 
 ## 🔒 Privacy
 
-In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](/account-proxy).
+In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/tree/main/account-proxy).
 
 **No credentials are sent from your YouTube account! The only info that the proxy server receives from you is the Video-ID and some non-user related information like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you have set a different proxy server instance, then the operator's policies apply.
 
@@ -174,14 +174,14 @@ To have an overview of the number of requests and possible issues, anonymous usa
 
 ## ⚠️ Disclaimer
 
-`Simple YouTube Age Restriction Bypass` is for educational and informational purposes only. It is not intended to encourage or facilitate any unauthorized access to restricted content on YouTube or any other platform.
+`YouTube Age Restriction Bypass` is for educational and informational purposes only. It is not intended to encourage or facilitate any unauthorized access to restricted content on YouTube or any other platform.
 
 The use of this project or any related code is at your own risk. You are solely responsible for complying with the terms of service, guidelines, and legal requirements set by YouTube or any other platform you interact with.
 
 ## 👥 Contributors
 
-Want to contribute to this project? Feel free to open an [issue](../../issues) or [pull request](../../pulls).
+Want to contribute to this project? Feel free to open an [issue](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/issues) or [pull request](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/pulls).
 
-<a href="../../graphs/contributors">
+<a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=zerodytrash/Simple-YouTube-Age-Restriction-Bypass"/>
 </a>
