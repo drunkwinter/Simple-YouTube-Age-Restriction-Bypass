@@ -1,19 +1,17 @@
-<div align="center">
-    <img height="80" src="../../raw/main/src/extension/icon/icon_128.png"></img>
-    <h1>Simple YouTube Age Restriction Bypass</h1>
-    <a href="#getting-started">Getting started</a> |
-    <a href="#privacy">Privacy</a> |
-    <a href="#development">Development</a> |
-    <a href="#contributors">Contributors</a>
-</div>
+<h1 align="center">
+    <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
+        <picture>
+            <source height="72" media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/1a3c22b6-7588-4e89-a736-bfa06185f5b8">
+            <img height="72" alt="Simple YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/1a3c22b6-7588-4e89-a736-bfa06185f5b8">
+        </picture>
+    </a>
+</h1>
 
-<br>
+<p align="center">
+    <i>Easily bypass YouTube's age verification with our browser userscript or extension 😎</i>
+</p>
 
 <div align="center">
-    <img width="800" src="https://user-images.githubusercontent.com/59258980/133007022-c12253c0-036c-49fe-8fce-42b62da14e8a.png" alt="Simple YouTube Age Restriction Bypass"/>
-    <br>
-    <p>A very simple to use browser extension to bypass YouTube's age verification 😎</p>
-    <br>
     <a href="#getting-started">
         <img src="https://img.shields.io/github/v/release/zerodytrash/Simple-YouTube-Age-Restriction-Bypass?style=for-the-badge&labelColor=14161f&color=3455db&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABNUlEQVR4XmNgGJTAJPS2MxAvAOKLULzANPSOA8yxJiG3GrA63CTktgBQwyEg/g/E24B4EhDPAuLzULEFIM0gNoYB5kG32YES+4H4vknoLS90BaYht1OBch+hBmEaAJTIg0q6wZ0aersAKAZ2uknonVgg+w8+A04BJfch2wwNhwTjkNuWUC8BXXjrAAhjeAGo4D0Qt2AzgKiYBmr+AsRlaAa0AsVOGoXcNkDyVgZQ7Bo2FxwDSmxElzAJuxMOFH8AjKEoSFjcnobuVbAeoGAiNIDg8Y1kqwgwFqRMQ29rAtV8AIZBHIYLjILv8QAl7wHxFaBtChguAYoB5S6B0oRx0AM2HAnpJkjRUWh8zwHSRVAMYoPSwFGTkJsYhqMYZhx6lwOosAKIz0A1gTSC2BUgOaJihK6KACxxvcsBmqZ3AAAAXXRFWHRDb3B5cmlnaHQAQ3JlYXRlZCB3aXRoIEljb25mdS5jb20gLSBEZXJpdmF0aXZlIHdvcmsgb2YgTWF0ZXJpYWwgaWNvbnMgKENvcHlyaWdodCBHb29nbGUgSW5jLinxtJO+AAAAV3RFWHRMaWNlbnNlAExpY2Vuc2VkIHVuZGVyIEFwYWNoZSBMaWNlbnNlIHYyLjAgKGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMCnj13QbAAAAAElFTkSuQmCC" alt="GitHub release"/>
     </a>
@@ -25,13 +23,18 @@
     </a>
 </div>
 
----
+<br>
 
-## How it works
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/59258980/133007022-c12253c0-036c-49fe-8fce-42b62da14e8a.png"/>
+</div>
 
-This extension uses some API tricks to access age-restricted videos from YouTube anonymously. As a fallback (in case that the API bypass methods does not work) an open source [Account Proxy Server](/account-proxy) is used. This allows you to watch all types of age-restricted videos on **YouTube** and **YouTube Music** without age verification and without the need to be signed in.
 
-All videos will be unlocked automatically!
+## Introduction
+
+`Simple YouTube Age Restriction Bypass` is a simple tool designed to bypass age restrictions on YouTube videos. It allows users to easily view content that is normally restricted due to age restrictions imposed by YouTube.
+
+This tool aims to provide a seamless and hassle-free experience for users who may encounter age restrictions while browsing or accessing YouTube content. By bypassing these restrictions, it enables users to access the desired content without the need to create or log in with a YouTube account.
 
 ## Getting started
 
@@ -69,17 +72,15 @@ Alternative mirrors:
 
 ### Usage
 
-No further actions are necessary. All age restricted videos are automatically unlocked. Make sure you reload YouTube after installation.
+No further actions are necessary. All age restricted videos are automatically unlocked. Make sure you reload YouTube after the installation.
 
 ## Privacy
 
-In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified account at YouTube. The source code of the proxy server can be found [here](/account-proxy).
+In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](/account-proxy).
 
-**No credentials are sent from your YouTube account! The only info that the proxy server receives from you is the Video-ID and some non-user related information like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you have set a different proxy server instance, then the operator's log policies apply.
+**No credentials are sent from your YouTube account! The only info that the proxy server receives from you is the Video-ID and some non-user related information like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you have set a different proxy server instance, then the operator's policies apply.
 
-To have an overview of the number of requests and possible problems, anonymous usage statistics are collected. These statistics are also not user-related and can be found [here](https://youtube-proxy.zerody.one/getStats).
-
-For some videos it is necessary to route the video data files (hosted at `googlevideo.com`) through a proxy server as well. The third-party service [4everproxy.com](https://www.4everproxy.com/) is used for this. You can read the privacy policy [here](https://www.4everproxy.com/privacy).
+To have an overview of the number of requests and possible issues, anonymous usage statistics are collected. These statistics can be viewed [here](https://youtube-proxy.zerody.one/getStats).
 
 ## Compatibility
 
@@ -151,8 +152,6 @@ And many more!
 
 ### Building
 
-We use [Rollup](https://rollupjs.org) with [Babel](https://github.com/babel/babel) to transpile into a single userscript file and maintain support for older browsers.
-
 **1. Clone the repository**
 ```sh
 git clone https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass.git
@@ -172,6 +171,12 @@ npm run build
 
 The userscript `Simple-YouTube-Age-Restriction-Bypass.user.js` and extension should now be located in the `dist` folder.
 > The extension is compiled to both Manifest [V2](https://developer.chrome.com/docs/extensions/mv2) and [V3](https://developer.chrome.com/docs/extensions/mv3/intro).
+
+## Disclaimer
+
+`Simple YouTube Age Restriction Bypass` is for educational and informational purposes only. It is not intended to encourage or facilitate any unauthorized access to restricted content on YouTube or any other platform.
+
+The use of this project or any related code is at your own risk. You are solely responsible for complying with the terms of service, guidelines, and legal requirements set by YouTube or any other platform you interact with.
 
 ## Contributors
 
