@@ -26,9 +26,8 @@
 <br>
 
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/59258980/133007022-c12253c0-036c-49fe-8fce-42b62da14e8a.png"/>
+    <img float="left" align="left" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/66a3aef1-14ac-4878-b69d-9aa6556e6dc2"/>
 </div>
-
 
 ## ⚡️ Introduction
 
