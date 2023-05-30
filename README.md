@@ -23,12 +23,11 @@
     </a>
 </div>
 
+<br>
+
 <div align="center">
     <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/f5539278-5390-471a-8fd7-445c5c29027a">
-            <img src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/259c906f-da9c-4cd0-bf3a-b25a467fa044">
-        </picture>
+        <img src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/e3227c42-25f8-47a7-a8f1-64f8668d3869">
     </a>
 </div>
 
