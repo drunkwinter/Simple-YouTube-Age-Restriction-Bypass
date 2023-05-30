@@ -2,7 +2,7 @@
     <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
         <picture>
             <source height="72" media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/1a3c22b6-7588-4e89-a736-bfa06185f5b8">
-            <img height="72" alt="Simple YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/1a3c22b6-7588-4e89-a736-bfa06185f5b8">
+            <img height="72" alt="Simple YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/c8b85fc7-d098-4394-9d17-970860661a54">
         </picture>
     </a>
 </h1>
