@@ -1,8 +1,8 @@
 <h1 align="center">
     <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
         <picture>
-            <source height="72" media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/ff87576e-3545-414a-bfbb-86d07604c995">
-            <img height="72" alt="YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/b948a69f-5b10-4714-8d27-8bae7f43e091">
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/ff87576e-3545-414a-bfbb-86d07604c995">
+            <img alt="YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/b948a69f-5b10-4714-8d27-8bae7f43e091">
         </picture>
     </a>
 </h1>
