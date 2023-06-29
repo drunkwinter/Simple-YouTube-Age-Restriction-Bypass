@@ -1,41 +1,22 @@
 {
   "type": "module",
-  "name": "simple-youtube-age-restriction-bypass",
-  "description": "A simple userscript to bypass YouTube's age verification and watch age restricted videos without having to sign in.",
-  "version": "2.5.9",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass.git"
-  },
-  "author": "zerody",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/issues"
-  },
-  "homepage": "https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass#readme",
-  "main": "dist/Simple-YouTube-Age-Restriction-Bypass.user.js",
-  "files": [
-    "dist/Simple-YouTube-Age-Restriction-Bypass.user.js"
-  ],
+  "private": true,
+  "name": "syarb",
   "workspaces": [
-    "account-proxy"
+    "packages/*"
   ],
   "scripts": {
-    "build": "node --no-warnings scripts/build.js",
+    "build": "node --experimental-import-meta-resolve scripts/build.js",
     "format": "dprint fmt",
     "check-format": "dprint check",
-    "proxy:start": "npm start --workspaces account-proxy"
+    "start:proxy": "npm start --workspace @syarb/proxy-server"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.2",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^25.0.5",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-replace": "^5.0.3",
-    "archiver": "^6.0.1",
-    "dprint": "^0.41.0",
-    "rollup": "^4.0.2",
-    "rollup-plugin-html": "^0.2.1"
+    "@babel/core": "7.22.20",
+    "@babel/preset-env": "7.22.20",
+    "@syarb/core": "*",
+    "@syarb/web-extension": "*",
+    "dprint": "0.41.0"
   },
   "engines": {
     "node": ">=18.0.0",

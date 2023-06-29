@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "private": true,
+  "name": "@syarb/web-extension",
+  "main": "./scripts/build.js",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@syarb/core": "*",
+    "@syarb/rollup-plugin-import-as-raw": "*",
+    "archiver": "^6.0.1",
+    "rollup": "^3.29.2"
+  }
+}

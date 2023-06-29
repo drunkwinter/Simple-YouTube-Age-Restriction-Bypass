@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "private": true,
+  "name": "@syarb/core",
+  "version": "2.5.9",
+  "exports": {
+    ".": "./dist/main.js",
+    "./build": "./scripts/build.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "25.0.4",
+    "@rollup/plugin-node-resolve": "15.2.1",
+    "@syarb/rollup-plugin-import-as-raw": "*",
+    "rollup": "3.29.2"
+  },
+  "dependencies": {
+    "sha-1": "1.0.0"
+  }
+}

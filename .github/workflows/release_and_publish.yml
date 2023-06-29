@@ -44,7 +44,8 @@ jobs:
         with:
           files: |
             ${{ env.USERSCRIPT_FILE_PATH }}
-            dist/**/*.zip
+            dist/web-extension/*.zip
+            dist/web-extension/*.xpi
 
       - name: Commit changes
         # Prevent running this in forks and also if this is a prerelease

@@ -2,9 +2,10 @@
   "compilerOptions": {
     "checkJs": true,
 
-    "module": "ESNext",
-    "moduleResolution": "bundler",
     "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
 
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -13,10 +14,9 @@
     "noImplicitAny": false,
 
     "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
-    "moduleDetection": "force"
   },
   "exclude": [
     "**/node_modules",

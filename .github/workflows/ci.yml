@@ -4,10 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - src/**/*.js
+      - 'packages/**/*.js'
+      - '!**/dist'
   pull_request:
     paths:
-      - src/**/*.js
+      - 'packages/**/*.js'
+      - '!**/dist'
   workflow_dispatch:
 
 # Prevent all permissions from being set, just use the ones we need.

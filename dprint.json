@@ -1,13 +1,12 @@
 {
   "typescript": {
-    "lineWidth": 180,
     "indentWidth": 4,
     "quoteStyle": "preferSingle"
   },
   "excludes": [
     "**/node_modules",
     "**/dist",
-    "account-proxy"
+    "packages/proxy-server"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.85.1.wasm"
