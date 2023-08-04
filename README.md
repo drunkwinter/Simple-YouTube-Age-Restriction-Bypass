@@ -40,10 +40,10 @@ The main aim of this tool is to provide a seamless experience for users who come
 To begin bypassing age restrictions on YouTube videos, follow the simple steps below.
 
 ### Installation
-You have multiple options to install YouTube Age Restriction Bypass: as a Browser **[Userscript](https://en.wikipedia.org/wiki/Userscript)** or as a **Browser Extension**.
+You have multiple ways to install YouTube Age Restriction Bypass on the browser: as a **[Userscript](https://en.wikipedia.org/wiki/Userscript)** or as a **Extension/Add-on**.
 
-#### Browser Userscript
-Install a Userscript Manager in your browser. We recommend [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/) for popular browsers.
+#### Userscript
+Install a Userscript Manager on your browser. We recommend [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/) for popular browsers.
 
 Once you have a Userscript Manager installed, click **[this link](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/raw/main/dist/Simple-YouTube-Age-Restriction-Bypass.user.js)** to install the **YouTube Age Restriction Bypass** userscript.
 
@@ -56,12 +56,12 @@ Alternative mirrors for the userscript:
     <img src="https://img.shields.io/badge/-openuserjs-2C3E50?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADsQAAA7EB9YPtSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAcdEVYdFRpdGxlAE9wZW5Vc2VySlMub3JnIGZhdmljb26U3BnCAAAALnRFWHRBdXRob3IATWFydGkgTWFydHogKGh0dHBzOi8vZ2l0aHViLmNvbS9NYXJ0aWkpxKc3NgAAACB0RVh0RGVzY3JpcHRpb24AQmFzZSBTVkcgZm9yIGZhdmljb245LGFfAAAAGHRFWHRDcmVhdGlvbiBUaW1lADIwMTQtMDUtMzFYrHNkAAAAhXRFWHRTb3VyY2UAaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL09wZW5Vc2VySlMvT3BlblVzZXJKUy5vcmcvNDQxZjZlNWZjNjMzYzhjNmQ4YzhhM2Q0NWE1ODY4NTQ0ZTY4ZGNiNS9wdWJsaWMvaW1hZ2VzL2Zhdmljb24uaWNv8+hvVQAAAPhJREFUOMtjuP307n9KMAPVDbj55M7/CRu2/3epnvBfLrEWjEHsiZt2gOXwGnDm9tX/1qU9/9kCCsFYLLoSjGF8m7IeoJpr2A0AmQ7TDFK4+eQJuKItp07+t6voA8vZlvWiuARuQP+GbWAFIEOuP76N4dQbj+7ADQF5B8MAp6p+sOSG4ydwBhjIJSA1LtUTMQ2QTaj9LxRZTjDUQWGikFSH24BbWEIaGYtG4TAA5oX1x46T5wVYIFoBA/HaI8xABAUsKHZwBiJyNIIMQXYJKGBhcjijEVtCEggv+y8YUYaWkK4STsog74DCBBSwIAxOyhu3E07KA5IbAVwKM3i/YjSuAAAAAElFTkSuQmCC" alt="OpenUserJS"/>
 </a>
 
-#### Browser Extension
+#### Extension
 > **Note** The browser extension is not available anymore through the official extension stores (such as Chrome Web Store or Firefox Add-ons) due to their terms of service.
 
 Install the `YouTube Age Restriction Bypass` extension manually by following these steps:
 
-1. Download the YouTube Age Restriction Bypass browser extension from the releases page.
+1. Download the YouTube Age Restriction Bypass extension from the releases page.
 2. Follow the installation instructions provided for your specific browser:
     - Chrome: Open the extensions page (`chrome://extensions/`), enable Developer Mode, and load the unpacked extension.
     - Firefox: Open the Add-ons Manager (`about:addons`), click the gear icon, and choose "Install Add-on From File."
@@ -71,11 +71,11 @@ Install the `YouTube Age Restriction Bypass` extension manually by following the
 Installing `YouTube Age Restriction Bypass` on mobile devices requires additional steps:
 
 ##### Android
-1. Install a browser that supports extensions on your Android device. We recommend [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) or [Kiwi Browser](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser).
+1. Install a browser that supports extensions. We recommend [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) or [Kiwi Browser](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser).
 2. Once you have the Userscript Manager installed, click this link to install the `YouTube Age Restriction Bypass` userscript.
 
 ##### iOS and ipadOS
-If you are using Safari on iOS, you can also install a userscript extension to use `YouTube Age Restriction Bypass`. Here's how:
+If you are using Safari on iOS, you can also install a userscript manager to use the `YouTube Age Restriction Bypass` userscript. Here's how:
 
 1. Download the `YouTube Age Restriction Bypass` userscript from the releases page.
 2. Install the [Userscripts](https://apps.apple.com/us/app/userscripts/id1463298887) app from the App Store.
@@ -181,9 +181,9 @@ The userscript `Simple-YouTube-Age-Restriction-Bypass.user.js` and extension sho
 
 ## 🔒 Privacy
 
-In order to unlock some video information, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/tree/main/account-proxy).
+In order to unlock some videos, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/tree/main/account-proxy).
 
-**No credentials are sent from your YouTube account! The only info that the proxy server receives from you is the Video-ID and some non-user related information like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you have set a different proxy server instance, then the operator's policies apply.
+**No credentials are sent from your YouTube account! The only data that the proxy server receives from you is the Video-ID and some non-user related data like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you use different proxy server instance, then the operator's policies apply.
 
 To have an overview of the number of requests and possible issues, anonymous usage statistics are collected. These statistics can be viewed [here](https://youtube-proxy.zerody.one/getStats).
 
