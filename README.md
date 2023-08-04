@@ -57,7 +57,8 @@ Alternative mirrors for the userscript:
 </a>
 
 #### Extension
-> **Note** The browser extension is not available anymore through the official extension stores (such as Chrome Web Store or Firefox Add-ons) due to their terms of service.
+> [!NOTE]
+> The browser extension is not available anymore through the official extension stores (such as Chrome Web Store or Firefox Add-ons) due to their terms of service.
 
 Install the `YouTube Age Restriction Bypass` extension manually by following these steps:
 
