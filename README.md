@@ -201,3 +201,9 @@ Want to contribute to this project? Feel free to open an [issue](https://github.
 <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=zerodytrash/Simple-YouTube-Age-Restriction-Bypass"/>
 </a>
+
+## 🏛️ License
+
+Copyright (c) zerodytrash. All rights reserved.
+
+Licensed under the MIT license.
