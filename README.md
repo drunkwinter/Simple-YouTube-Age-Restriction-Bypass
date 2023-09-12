@@ -206,4 +206,4 @@ Want to contribute to this project? Feel free to open an [issue](https://github.
 
 Copyright (c) zerodytrash. All rights reserved.
 
-Licensed under the MIT license.
+Licensed under the [MIT](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/blob/main/LICENSE) license.
