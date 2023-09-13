@@ -1,8 +1,8 @@
 <h1 align="center">
     <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
         <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/ff87576e-3545-414a-bfbb-86d07604c995">
-            <img alt="YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/b948a69f-5b10-4714-8d27-8bae7f43e091">
+            <source media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/ff87576e-3545-414a-bfbb-86d07604c995"/>
+            <img alt="YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/b948a69f-5b10-4714-8d27-8bae7f43e091"/>
         </picture>
     </a>
 </h1>
@@ -88,68 +88,49 @@ Once you have installed YouTube Age Restriction Bypass, there are no further act
 Enjoy uninterrupted access to your desired content without age restrictions!
 
 ## 🧩 Compatibility
-### Browser support
-The following browsers are supported:
+### Browser compatibility
 
 <table>
     <tbody>
         <tr>
             <th scope="row"></th>
-            <td align="center" colspan="2">
-                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px"/>
-                <br>Chrome
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_24x24.png" alt="Chrome"/><br />
+                Chrome
             </td>
-            <td align="center" colspan="2">
-                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px"/>
-                <br>Edge
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_24x24.png" alt="Edge"/><br />
+                Edge
             </td>
-            <td align="center" colspan="2">
-                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px"/>
-                <br>Firefox
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_24x24.png" alt="Firefox"/><br />
+                Firefox
             </td>
-            <td align="center" colspan="2">
-                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px"/>
-                <br>Safari
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_24x24.png" alt="Safari"/><br />
+                Safari
             </td>
-            <td align="center" colspan="2">
-                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px"/>
-                <br>Opera
+            <td align="center">
+                <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_24x24.png" alt="Opera"/><br />
+                Opera
             </td>
         </tr>
         <tr>
-            <th scope="row"></th>
-            <td align="center">Desktop</td>
-            <td align="center">Mobile</td>
-            <td align="center">Desktop</td>
-            <td align="center">Mobile</td>
-            <td align="center">Desktop</td>
-            <td align="center">Mobile</td>
-            <td align="center">Desktop</td>
-            <td align="center">Mobile</td>
-            <td align="center">Desktop</td>
-            <td align="center">Mobile</td>
-        </tr>
-        <tr>
-            <th scope="row"><a href="#browser-extension">Extension</a></th>
+            <th scope="row"><a href="#extension">Extension</a></th>
             <td align="center">🟢</td>
+            <td align="center">🟢</td>
+            <td align="center">🟠*</td>
             <td align="center">🔴</td>
             <td align="center">🟢</td>
-            <td align="center">🔴</td>
-            <td align="center">🟢</td>
-            <td align="center">🟠</td>
-            <td align="center">🟠</td>
-            <td align="center">🟠</td>
-            <td align="center">🟠</td>
-            <td align="center">🟠</td>
         </tr>
         <tr>
             <th scope="row"><a href="#userscript">Userscript</a></th>
-            <td colspan="5" align="center">✅ <strong>Full support</strong></td>
+            <td align="center" colspan="5">✅ <strong>Full support</strong></td>
         </tr>
     </tbody>
 </table>
 
-And many more!
+**Only supported on some Firefox based browsers which allow installing unsigned extensions.*
 
 ## 🛠️ Development
 
