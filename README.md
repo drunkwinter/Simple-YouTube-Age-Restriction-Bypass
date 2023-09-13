@@ -34,7 +34,7 @@
 ## ⚡️ Introduction
 `YouTube Age Restriction Bypass` is a user-friendly tool specifically designed to help you bypass age restrictions on YouTube videos. Its primary objective is to ensure easy access to content that would typically be restricted due to age limitations set by YouTube.
 
-The main aim of this tool is to provide a seamless experience for users who come across age restricted content while watching videos on YouTube. By circumventing these restrictions, it allows you to view the content you desire without the need to verify your age or log in with a YouTube account.
+The main aim of this tool is to provide a seamless experience for users who come across age-restricted content while watching videos on YouTube. By circumventing these restrictions, it allows you to view the content you desire without the need to verify your age or log in with a YouTube account.
 
 ## 🕹️ Getting started
 To begin bypassing age restrictions on YouTube videos, follow the simple steps below.
@@ -182,15 +182,15 @@ The userscript `Simple-YouTube-Age-Restriction-Bypass.user.js` and extension sho
 
 ## 🔒 Privacy
 
-In order to unlock some videos, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code of the proxy server can be found [here](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/tree/main/account-proxy).
+In order to unlock some videos, requests are handled through a proxy server. On the server side, the request will be authenticated with the credentials of an age-verified YouTube account. The source code for the proxy server can be found [here](https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass/tree/main/account-proxy).
 
-**No credentials are sent from your YouTube account! The only data that the proxy server receives from you is the Video-ID and some non-user related data like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP-Adresses or Video-IDs. If you use different proxy server instance, then the operator's policies apply.
+**No credentials are being sent from your YouTube account! The only data that the proxy server receives from you is the video ID and some non-user-related data, like the version of the YouTube website.** The used proxy server at `youtube-proxy.zerody.one` **does not** log IP addresses or video IDs. If you use a different proxy server instance, then the operator's policies apply.
 
-To have an overview of the number of requests and possible issues, anonymous usage statistics are collected. These statistics can be viewed [here](https://youtube-proxy.zerody.one/getStats).
+To get an overview of the number of requests and possible issues, anonymous usage statistics are collected. These statistics can be viewed [here](https://youtube-proxy.zerody.one/getStats).
 
 ## ⚠️ Disclaimer
 
-`YouTube Age Restriction Bypass` is for educational and informational purposes only. It is not intended to encourage or facilitate any unauthorized access to restricted content on YouTube or any other platform.
+`YouTube Age Restriction Bypass` is for educational and informational purposes only. It is not meant to encourage or facilitate any unauthorized access to restricted content on YouTube or any other platform.
 
 The use of this project or any related code is at your own risk. You are solely responsible for complying with the terms of service, guidelines, and legal requirements set by YouTube or any other platform you interact with.
 
