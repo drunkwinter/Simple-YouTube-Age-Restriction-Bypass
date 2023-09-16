@@ -2,6 +2,7 @@
     <a href="https://github.com/zerodytrash/Simple-YouTube-Age-Restriction-Bypass">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/ff87576e-3545-414a-bfbb-86d07604c995"/>
+            <source media="(prefers-color-scheme: light)" srcset="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/b948a69f-5b10-4714-8d27-8bae7f43e091">
             <img alt="YouTube Age Restriction Bypass" src="https://github.com/drunkwinter/Simple-YouTube-Age-Restriction-Bypass/assets/38593134/b948a69f-5b10-4714-8d27-8bae7f43e091"/>
         </picture>
     </a>
@@ -70,7 +71,7 @@ Install the `YouTube Age Restriction Bypass` extension manually by following the
 
 #### Mobile Devices (Android and iOS)
 Installing `YouTube Age Restriction Bypass` on mobile devices requires additional steps:
-
+  
 ##### Android
 1. Install a browser that supports extensions. We recommend [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) or [Kiwi Browser](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser).
 2. Once you have the Userscript Manager installed, click this link to install the `YouTube Age Restriction Bypass` userscript.
