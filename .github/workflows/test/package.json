@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "package": "npx ncc build ./index.js -o dist2 --source-map"
   },
