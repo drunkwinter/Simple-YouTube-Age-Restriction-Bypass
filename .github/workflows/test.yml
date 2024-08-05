@@ -1,0 +1,14 @@
+name: Example Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    name: Say Hello
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print to Log
+        id: print-to-log
+        uses: ./test
