@@ -1,1 +1,3 @@
-console.log('HELLO!!');
+import core from '@actions/core';
+
+core.info('Hello')
