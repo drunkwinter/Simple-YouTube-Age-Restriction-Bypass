@@ -26808,18 +26808,11 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 
-core.setFailed('YURMOM!!!!!')
-
-// async function run() {
-//     try {
-//         throw 'Your mom is too hot';
-//     } catch (error) {
-//         // Fail the workflow run if an error occurs
-//         if (error instanceof Error) core.setFailed(error.message)
-//     }
-// }
-
-// run();
+try {
+    console.log(`Hello ALLL!`);
+  } catch (error) {
+    core.setFailed(error.message);
+}
 
 })();
 
