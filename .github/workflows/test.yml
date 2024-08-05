@@ -15,4 +15,4 @@ jobs:
           fetch-depth: 0
       - name: Print to Log
         id: print-to-log
-        uses: ./test
+        uses: test
