@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "package": "npx ncc build index.ts -o dist2 --source-map"
+    "package": "npx ncc build index.js -o dist2 --source-map"
   },
   "author": "",
   "license": "MIT",
