@@ -69,7 +69,7 @@ jobs:
 
       - name: Publish on GreasyFork
         # Prevent running this in forks and also if this is a prerelease
-        if: github.event.repository.fork == false && github.event.release.prerelease == false
+        # if: github.event.repository.fork == false && github.event.release.prerelease == false
         uses: ./.github/workflows/test
         with:
           GREASYFORK_USER_EMAIL: ${{ secrets.GREASYFORK_USER_EMAIL }}
