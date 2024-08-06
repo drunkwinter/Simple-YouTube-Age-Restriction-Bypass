@@ -19000,7 +19000,7 @@ async function publish_to_greasyfork() {
   const script_file_path = core.getInput("SCRIPT_FILE_PATH");
   const BASE_URL = "https://greasyfork.org";
   const initial_url = `${BASE_URL}/en/search`;
-  const initial_response = await fetch(initial_url);
+  const initial_response = await fetch(initial_url, { method: "GET" });
   let cookie = initial_response.headers.getSetCookie().join("; ");
   const initial_response_body = await initial_response.text();
   let authenticity_token = extract_authenticity_token(initial_response_body);
@@ -19015,8 +19015,9 @@ async function publish_to_greasyfork() {
   login_body.set("commit", "Log in");
   const login_url = `${BASE_URL}/en/users/sign_in?return_to=$INITIAL_PAGE_PATH`;
   const login_response = await fetch(login_url, {
-    body: login_body,
-    headers: { "Cookie": cookie }
+    method: "POST",
+    headers: { "Cookie": cookie },
+    body: login_body
   });
   cookie = initial_response.headers.getSetCookie().join("; ");
   const login_response_body = await login_response.text();
@@ -19047,8 +19048,8 @@ async function publish_to_greasyfork() {
   const update_url = `${BASE_URL}/en/scripts/${greasyfork_script_id}/versions`;
   const update_response = await fetch(update_url, {
     method: "POST",
-    body: update_body,
-    headers: { "Cookie": cookie }
+    headers: { "Cookie": cookie },
+    body: update_body
   });
   const update_response_body = await update_response.text();
   if (!update_response_body.includes('id="install-area"')) {

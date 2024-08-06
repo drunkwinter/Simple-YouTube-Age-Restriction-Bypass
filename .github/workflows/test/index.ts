@@ -35,7 +35,7 @@ async function publish_to_greasyfork() {
     const initial_url= `${BASE_URL}/en/search`;
 
     // Get initial page to retrieve the initial auth token
-    const initial_response = await fetch(initial_url);
+    const initial_response = await fetch(initial_url, { method: 'GET' });
 
     let cookie = initial_response.headers.getSetCookie().join('; ');
 
@@ -58,8 +58,9 @@ async function publish_to_greasyfork() {
 
     // Log in to retrieve the final login auth token
     const login_response = await fetch(login_url, {
+        method: 'POST',
+        headers: { 'Cookie': cookie },
         body: login_body,
-        headers: {'Cookie': cookie },
     });
 
     cookie = initial_response.headers.getSetCookie().join('; ');
@@ -102,8 +103,8 @@ async function publish_to_greasyfork() {
     // Update the script
     const update_response = await fetch(update_url, {
         method: 'POST',
+        headers: { 'Cookie': cookie },
         body: update_body,
-        headers: {'Cookie': cookie },
     });
 
     const update_response_body = await update_response.text();
