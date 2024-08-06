@@ -49,19 +49,23 @@ async function publish_to_greasyfork() {
         throw new Error('Could not retrieve initial authentication token');
     }
 
-    const login_body = new FormData();
-    login_body.set('authenticity_token', authenticity_token);
-    login_body.set('user[email]', greasyfork_user_email);
-    login_body.set('user[password]', greasyfork_user_pass);
-    login_body.set('user[remember_me]', '0');
-    login_body.set('commit', 'Log in');
+    const login_body = new URLSearchParams({
+        'authenticity_token': authenticity_token,
+        'user[email]': greasyfork_user_email,
+        'user[password]': greasyfork_user_pass,
+        'user[remember_me]': '0',
+        'commit': 'Log in',
+    });
 
     const login_url= `${BASE_URL}/en/users/sign_in?return_to=${INITIAL_PAGE_PATH}`;
 
     // Log in to retrieve the final login auth token
     const login_response = await fetch(login_url, {
         method: 'POST',
-        headers: { 'Cookie': cookie },
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Cookie': cookie,
+        },
         body: login_body,
     });
 
