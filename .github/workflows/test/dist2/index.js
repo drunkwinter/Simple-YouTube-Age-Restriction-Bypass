@@ -5402,7 +5402,7 @@ var require_formdata = __commonJS({
     var { webidl } = require_webidl();
     var { Blob: Blob2, File: NativeFile } = require("buffer");
     var File = NativeFile ?? UndiciFile;
-    var FormData = class _FormData {
+    var FormData2 = class _FormData {
       constructor(form) {
         if (form !== void 0) {
           throw webidl.errors.conversionFailed({
@@ -5519,8 +5519,8 @@ var require_formdata = __commonJS({
         }
       }
     };
-    FormData.prototype[Symbol.iterator] = FormData.prototype.entries;
-    Object.defineProperties(FormData.prototype, {
+    FormData2.prototype[Symbol.iterator] = FormData2.prototype.entries;
+    Object.defineProperties(FormData2.prototype, {
       [Symbol.toStringTag]: {
         value: "FormData",
         configurable: true
@@ -5544,7 +5544,7 @@ var require_formdata = __commonJS({
       }
       return { name, value };
     }
-    module2.exports = { FormData };
+    module2.exports = { FormData: FormData2 };
   }
 });
 
@@ -5562,7 +5562,7 @@ var require_body = __commonJS({
       createDeferredPromise,
       fullyReadBody
     } = require_util2();
-    var { FormData } = require_formdata();
+    var { FormData: FormData2 } = require_formdata();
     var { kState } = require_symbols2();
     var { webidl } = require_webidl();
     var { DOMException: DOMException2, structuredClone } = require_constants2();
@@ -5784,7 +5784,7 @@ Content-Type: ${value.type || "application/octet-stream"}\r
           if (/multipart\/form-data/.test(contentType)) {
             const headers = {};
             for (const [key, value] of this.headers) headers[key.toLowerCase()] = value;
-            const responseFormData = new FormData();
+            const responseFormData = new FormData2();
             let busboy;
             try {
               busboy = new Busboy({
@@ -5844,7 +5844,7 @@ Content-Type: ${value.type || "application/octet-stream"}\r
             } catch (err) {
               throw Object.assign(new TypeError(), { cause: err });
             }
-            const formData = new FormData();
+            const formData = new FormData2();
             for (const [name, value] of entries) {
               formData.append(name, value);
             }
@@ -12239,7 +12239,7 @@ var require_response = __commonJS({
     } = require_constants2();
     var { kState, kHeaders, kGuard, kRealm } = require_symbols2();
     var { webidl } = require_webidl();
-    var { FormData } = require_formdata();
+    var { FormData: FormData2 } = require_formdata();
     var { getGlobalOrigin } = require_global();
     var { URLSerializer } = require_dataURL();
     var { kHeadersList, kConstruct } = require_symbols();
@@ -12535,7 +12535,7 @@ var require_response = __commonJS({
       ReadableStream
     );
     webidl.converters.FormData = webidl.interfaceConverter(
-      FormData
+      FormData2
     );
     webidl.converters.URLSearchParams = webidl.interfaceConverter(
       URLSearchParams
@@ -13331,7 +13331,7 @@ var require_fetch = __commonJS({
         this.emit("terminated", error);
       }
     };
-    function fetch(input, init = {}) {
+    function fetch2(input, init = {}) {
       webidl.argumentLengthCheck(arguments, 1, { header: "globalThis.fetch" });
       const p = createDeferredPromise();
       let requestObject;
@@ -14261,7 +14261,7 @@ var require_fetch = __commonJS({
       }
     }
     module2.exports = {
-      fetch,
+      fetch: fetch2,
       Fetch,
       fetching,
       finalizeAndReportTiming
@@ -17531,7 +17531,7 @@ var require_undici = __commonJS({
     module2.exports.getGlobalDispatcher = getGlobalDispatcher;
     if (util.nodeMajor > 16 || util.nodeMajor === 16 && util.nodeMinor >= 8) {
       let fetchImpl = null;
-      module2.exports.fetch = async function fetch(resource) {
+      module2.exports.fetch = async function fetch2(resource) {
         if (!fetchImpl) {
           fetchImpl = require_fetch().fetch;
         }
@@ -18834,7 +18834,7 @@ var require_core = __commonJS({
       process.env["PATH"] = `${inputPath}${path.delimiter}${process.env["PATH"]}`;
     }
     exports2.addPath = addPath;
-    function getInput(name, options) {
+    function getInput2(name, options) {
       const val = process.env[`INPUT_${name.replace(/ /g, "_").toUpperCase()}`] || "";
       if (options && options.required && !val) {
         throw new Error(`Input required and not supplied: ${name}`);
@@ -18844,9 +18844,9 @@ var require_core = __commonJS({
       }
       return val.trim();
     }
-    exports2.getInput = getInput;
+    exports2.getInput = getInput2;
     function getMultilineInput(name, options) {
-      const inputs = getInput(name, options).split("\n").filter((x) => x !== "");
+      const inputs = getInput2(name, options).split("\n").filter((x) => x !== "");
       if (options && options.trimWhitespace === false) {
         return inputs;
       }
@@ -18856,7 +18856,7 @@ var require_core = __commonJS({
     function getBooleanInput(name, options) {
       const trueValue = ["true", "True", "TRUE"];
       const falseValue = ["false", "False", "FALSE"];
-      const val = getInput(name, options);
+      const val = getInput2(name, options);
       if (trueValue.includes(val))
         return true;
       if (falseValue.includes(val))
@@ -18878,11 +18878,11 @@ Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
       command_1.issue("echo", enabled ? "on" : "off");
     }
     exports2.setCommandEcho = setCommandEcho;
-    function setFailed(message) {
+    function setFailed2(message) {
       process.exitCode = ExitCode.Failure;
       error(message);
     }
-    exports2.setFailed = setFailed;
+    exports2.setFailed = setFailed2;
     function isDebug() {
       return process.env["RUNNER_DEBUG"] === "1";
     }
@@ -18967,13 +18967,102 @@ Support boolean input list: \`true | True | TRUE | false | False | FALSE\``);
   }
 });
 
-// index.js
-var core = require_core();
-try {
-  console.log(`Hello ALLL!`);
-} catch (error) {
-  core.setFailed(error.message);
+// index.ts
+var import_fs = require("fs");
+var core = __toESM(require_core());
+async function run() {
+  try {
+    await publish_to_greasyfork();
+  } catch (error) {
+    if (error instanceof Error) {
+      core.setFailed(error.message);
+    }
+  }
 }
+function extract_authenticity_token(text) {
+  const match = text.match(/name="csrf-token" content="([^"]+)"/);
+  return match ? match[0] : null;
+}
+async function publish_to_greasyfork() {
+  const greasyfork_user_email = core.getInput("GREASYFORK_USER_EMAIL");
+  const greasyfork_user_pass = core.getInput("GREASYFORK_USER_PASS");
+  const greasyfork_script_id = core.getInput("GREASYFORK_SCRIPT_ID");
+  const greasyfork_script_type = (() => {
+    switch (core.getInput("GREASYFORK_SCRIPT_TYPE")) {
+      case "public":
+        return 1;
+      case "unlisted":
+        return 2;
+      case "library":
+        return 3;
+    }
+  })();
+  const script_file_path = core.getInput("SCRIPT_FILE_PATH");
+  const BASE_URL = "https://greasyfork.org";
+  const initial_url = `${BASE_URL}/en/search`;
+  const initial_response = await fetch(initial_url);
+  let cookie = initial_response.headers.getSetCookie().join("; ");
+  const initial_response_body = await initial_response.text();
+  let authenticity_token = extract_authenticity_token(initial_response_body);
+  if (!authenticity_token) {
+    throw new Error("Could not retrieve initial authentication token");
+  }
+  const login_body = new FormData();
+  login_body.set("authenticity_token", authenticity_token);
+  login_body.set("user[email]", greasyfork_user_email);
+  login_body.set("user[password]", greasyfork_user_pass);
+  login_body.set("user[remember_me]", "0");
+  login_body.set("commit", "Log in");
+  const login_url = `${BASE_URL}/en/users/sign_in?return_to=$INITIAL_PAGE_PATH`;
+  const login_response = await fetch(login_url, {
+    body: login_body,
+    headers: { "Cookie": cookie }
+  });
+  cookie = initial_response.headers.getSetCookie().join("; ");
+  const login_response_body = await login_response.text();
+  if (!login_response_body.includes("sign-out-link")) {
+    console.log("\x1B[38;2;103;103;103m%s\x1B[0m\n", login_response);
+    console.log("\x1B[1;31mFailed: Sign in\x1B[0m - Unknown reason");
+    process.exitCode = 1;
+    return;
+  }
+  authenticity_token = extract_authenticity_token(login_response_body);
+  if (!authenticity_token) {
+    throw new Error("Could not retrieve login authentication token");
+  }
+  const script_file_blob = new Blob([(0, import_fs.readFileSync)(script_file_path)]);
+  const update_body = new FormData();
+  update_body.set("authenticity_token", authenticity_token);
+  update_body.set("script_version[code]", "");
+  update_body.set("code_upload", script_file_blob);
+  update_body.set("script_version[additional_info][0][attribute_default]", "true");
+  update_body.set("script_version[additional_info][0][value_markup]", "html");
+  update_body.set("script_version[additional_info][0][attribute_value]", "");
+  update_body.set("script_version[attachments][]", "");
+  update_body.set("script_version[changelog_markup]", "html");
+  update_body.set("script_version[changelog]", "");
+  update_body.set("script[script_type]", greasyfork_script_type);
+  update_body.set("script[adult_content_self_report]", "0");
+  update_body.set("commit", "Post new version");
+  const update_url = `${BASE_URL}/en/scripts/${greasyfork_script_id}/versions`;
+  const update_response = await fetch(update_url, {
+    method: "POST",
+    body: update_body,
+    headers: { "Cookie": cookie }
+  });
+  const update_response_body = await update_response.text();
+  if (!update_response_body.includes('id="install-area"')) {
+    console.log("\x1B[38;2;103;103;103m%s\x1B[0m\n", update_response_body);
+    if (update_response_body.includes("validation-errors")) {
+      console.log("\x1B[1;31mFailed: Publish to GreasyFork\x1B[0m - Validation errors were reported");
+    } else {
+      console.log("\x1B[1;31mFailed: Publish to GreasyFork\x1B[0m - Unknown reason");
+    }
+    process.exitCode = 1;
+    return;
+  }
+}
+run();
 /*! Bundled license information:
 
 undici/lib/fetch/body.js:

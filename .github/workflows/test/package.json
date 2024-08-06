@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "esbuild index.js --bundle --outdir=dist2 --platform=node --sourcemap",
-    "package": "npx ncc build index.js -o dist2 --target es2022 --source-map"
+    "build": "esbuild index.ts --bundle --outdir=dist2 --platform=node --sourcemap"
   },
   "author": "",
   "license": "MIT",
@@ -16,12 +15,10 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@actions/core": "^1.10.1"
+    "@actions/core": "1.10.1"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "@vercel/ncc": "^0.38.1",
-    "esbuild": "0.23.0",
-    "typescript": "^5.5.4"
+    "@types/node": "22.0.0",
+    "esbuild": "0.23.0"
   }
 }

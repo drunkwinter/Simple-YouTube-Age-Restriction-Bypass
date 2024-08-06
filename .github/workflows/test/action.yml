@@ -1,6 +1,27 @@
 name: 'test'
 description: 'testing'
 
+inputs:
+  GREASYFORK_USER_EMAIL:
+    description: greasyfork email
+    required: true
+  GREASYFORK_USER_PASS:
+    description: greasyfork pass
+    required: true
+  GREASYFORK_SCRIPT_ID:
+    description: greasyfork script id
+    required: true
+  GREASYFORK_SCRIPT_TYPE:
+    description: greasyfork script type
+      public - for all to see and use.
+      unlisted - for (semi-)private use. Available by direct access, but not linked to from anywhere on Greasy Fork.
+      library - intended to be @require-d from other scripts and not installed directly.
+    required: true
+    default: 'public'
+  SCRIPT_FILE_PATH:
+    description: script file path to upload
+    required: true
+
 runs:
   using: node20
   main: dist2/index.js
