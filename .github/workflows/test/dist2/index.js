@@ -18999,7 +18999,8 @@ async function publish_to_greasyfork() {
   })();
   const script_file_path = core.getInput("SCRIPT_FILE_PATH");
   const BASE_URL = "https://greasyfork.org";
-  const initial_url = `${BASE_URL}/en/search`;
+  const INITIAL_PAGE_PATH = "/en/search";
+  const initial_url = `${BASE_URL}${INITIAL_PAGE_PATH}`;
   const initial_response = await fetch(initial_url, { method: "GET" });
   let cookie = initial_response.headers.getSetCookie().join("; ");
   const initial_response_body = await initial_response.text();
@@ -19013,7 +19014,7 @@ async function publish_to_greasyfork() {
   login_body.set("user[password]", greasyfork_user_pass);
   login_body.set("user[remember_me]", "0");
   login_body.set("commit", "Log in");
-  const login_url = `${BASE_URL}/en/users/sign_in?return_to=$INITIAL_PAGE_PATH`;
+  const login_url = `${BASE_URL}/en/users/sign_in?return_to=${INITIAL_PAGE_PATH}`;
   const login_response = await fetch(login_url, {
     method: "POST",
     headers: { "Cookie": cookie },
