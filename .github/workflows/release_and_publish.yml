@@ -74,7 +74,7 @@ jobs:
         with:
           GREASYFORK_USER_EMAIL: ${{ secrets.GREASYFORK_USER_EMAIL }}
           GREASYFORK_USER_PASS: ${{ secrets.GREASYFORK_USER_PASS }}
-          GREASYFORK_SCRIPT_ID: '423851'
+          GREASYFORK_SCRIPT_ID: '460089'
           # public - for all to see and use.
           # unlisted - for (semi-)private use. Available by direct access, but not linked to from anywhere on Greasy Fork.
           # library - intended to be @require-d from other scripts and not installed directly.

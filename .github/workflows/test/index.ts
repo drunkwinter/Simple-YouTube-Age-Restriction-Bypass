@@ -15,11 +15,6 @@ async function run() {
             return '1';
         })();
 
-        core.debug(greasyfork_user_email + ' - ' +
-                    greasyfork_user_pass + ' - ' +
-                    greasyfork_script_id + ' - ' +
-                    greasyfork_script_type);
-
         const file_path_to_upload = core.getInput('SCRIPT_FILE_PATH');
 
         await publish_to_greasyfork(greasyfork_user_email, greasyfork_user_pass, greasyfork_script_id, greasyfork_script_type, file_path_to_upload);
