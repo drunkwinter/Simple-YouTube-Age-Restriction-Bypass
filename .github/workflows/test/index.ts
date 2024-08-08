@@ -15,7 +15,10 @@ async function run() {
             return '1';
         })();
 
-        console.log(greasyfork_user_email, greasyfork_user_pass, greasyfork_script_id, greasyfork_script_type, );
+        core.debug(greasyfork_user_email + ' - ' +
+                    greasyfork_user_pass + ' - ' +
+                    greasyfork_script_id + ' - ' +
+                    greasyfork_script_type);
 
         const file_path_to_upload = core.getInput('SCRIPT_FILE_PATH');
 
