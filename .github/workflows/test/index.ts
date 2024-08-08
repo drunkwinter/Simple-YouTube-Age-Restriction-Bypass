@@ -3,7 +3,23 @@ import * as core from '@actions/core'
 
 async function run() {
     try {
-        await publish_to_greasyfork();
+        const greasyfork_user_email = core.getInput('GREASYFORK_USER_EMAIL');
+        const greasyfork_user_pass = core.getInput('GREASYFORK_USER_PASS');
+        const greasyfork_script_id = core.getInput('GREASYFORK_SCRIPT_ID');
+        const greasyfork_script_type = (() => {
+            switch (core.getInput('GREASYFORK_SCRIPT_TYPE')) {
+                case 'public': return '1';
+                case 'unlisted': return '2';
+                case 'library': return '3';
+            }
+            return '1';
+        })();
+
+        console.log(greasyfork_user_email, greasyfork_user_pass, greasyfork_script_id, greasyfork_script_type, );
+
+        const file_path_to_upload = core.getInput('SCRIPT_FILE_PATH');
+
+        await publish_to_greasyfork(greasyfork_user_email, greasyfork_user_pass, greasyfork_script_id, greasyfork_script_type, file_path_to_upload);
     } catch (error) {
         if (error instanceof Error) {
             core.setFailed(error.message);
@@ -13,22 +29,10 @@ async function run() {
 
 function extract_authenticity_token(text: string): string | null {
     const match = text.match(/name="csrf-token" content="([^"]+)"/);
-    return match ? match[0] : null;
+    return match ? match[1] : null;
 }
 
-async function publish_to_greasyfork() {
-    const greasyfork_user_email = core.getInput('GREASYFORK_USER_EMAIL');
-    const greasyfork_user_pass = core.getInput('GREASYFORK_USER_PASS');
-    const greasyfork_script_id = core.getInput('GREASYFORK_SCRIPT_ID');
-    const greasyfork_script_type = (() => {
-        switch (core.getInput('GREASYFORK_SCRIPT_TYPE')) {
-            case 'public': return 1;
-            case 'unlisted': return 2;
-            case 'library': return 3;
-        }
-    })();
-    const script_file_path = core.getInput('SCRIPT_FILE_PATH');
-
+async function publish_to_greasyfork(user_email: string, user_pass: string, script_id: string, script_type: string, file_path_to_upload: string) {
     const BASE_URL = 'https://greasyfork.org';
 
     // "/en/search" appears to be the lightest page
@@ -51,8 +55,8 @@ async function publish_to_greasyfork() {
 
     const login_body = new URLSearchParams({
         'authenticity_token': authenticity_token,
-        'user[email]': greasyfork_user_email,
-        'user[password]': greasyfork_user_pass,
+        'user[email]': user_email,
+        'user[password]': user_pass,
         'user[remember_me]': '0',
         'commit': 'Log in',
     });
@@ -62,10 +66,7 @@ async function publish_to_greasyfork() {
     // Log in to retrieve the final login auth token
     const login_response = await fetch(login_url, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Cookie': cookie,
-        },
+        headers: { 'Cookie': cookie },
         body: login_body,
     });
 
@@ -88,7 +89,7 @@ async function publish_to_greasyfork() {
         throw new Error('Could not retrieve login authentication token');
     }
 
-    const script_file_blob = new Blob([readFileSync(script_file_path)]);
+    const script_file_blob = new Blob([readFileSync(file_path_to_upload)]);
 
     const update_body = new FormData();
     update_body.set('authenticity_token', authenticity_token);
@@ -100,11 +101,11 @@ async function publish_to_greasyfork() {
     update_body.set('script_version[attachments][]', '');
     update_body.set('script_version[changelog_markup]', 'html');
     update_body.set('script_version[changelog]', '');
-    update_body.set('script[script_type]', greasyfork_script_type);
+    update_body.set('script[script_type]', script_type);
     update_body.set('script[adult_content_self_report]', '0');
     update_body.set('commit', 'Post new version');
 
-    const update_url= `${BASE_URL}/en/scripts/${greasyfork_script_id}/versions`;
+    const update_url= `${BASE_URL}/en/scripts/${script_id}/versions`;
 
     // Update the script
     const update_response = await fetch(update_url, {
